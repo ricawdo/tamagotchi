@@ -1,7 +1,9 @@
 <ul>
-  <% @animals.each do |animal| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cvlaval.com/sites/default/files/carousel/chat-1.jpg) %>)">
-      <li><%= link_to animal.name, animal_path(animal) %></li>
-    </div>
-  <% end %>
+  <div class="cards">
+    <% @animals.each do |animal| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cvlaval.com/sites/default/files/carousel/chat-1.jpg)">
+        <%= link_to animal.name, animal_path(animal) %>
+      </div>
+    <% end %>
+  </div>
 </ul>
