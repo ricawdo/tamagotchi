@@ -1,1 +1,31 @@
 // Specific CSS for your home-page
+#step-1-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  object-fit: cover;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.step {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-around;
+}
+
+.card-step {
+text-align: center;
+border-radius: 8px;
+border: 1px solid $green;
+width: 220px;
+box-shadow: 0 1px 6px rgba(0,0,0,0.4);
+padding: 20px;
+}
+
+.card-step h3 {
+  font-family: "Montserrat";
+  color: $green;
+
+}
