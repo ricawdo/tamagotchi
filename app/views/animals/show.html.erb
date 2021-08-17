@@ -1,17 +1,14 @@
 <div class="container">
-  <div class="card" style="width: 25rem;">
-        <img src="https://cvlaval.com/sites/default/files/carousel/chat-1.jpg"  class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><%= @animal.name %></h5>
-          <p class="card-text"><%= @animal.breed %></p>
-          <p class="card-text"><%= @animal.adress %></p>
-          <p class="card-text"><%= @animal.age %></p>
-          <p class="card-text"><%= @animal.price %></p>
-          <p class="card-text"><%= @animal.description %></p>
-          <p class="card-text"><%= @animal.specie %></p>
-          <%= link_to "Mettre dans le panier", "#", class: 'btn-flat'%>
-        </div>
+  <img class="img-show" src="https://cvlaval.com/sites/default/files/carousel/chat-1.jpg" alt="...">
+  <div class="description-container">
+          <h3 class="card-title"><strong><%= @animal.name %></strong></h3>
+          <p class="card-text">Breed : <strong><%= @animal.breed %></strong></p>
+          <p class="card-text">Address : <strong><%= @animal.adress %></strong></p>
+          <p class="card-text">Age : <strong><%= @animal.age %></strong> year(s)</p>
+          <p class="card-text">Price : <strong><%= @animal.price %></strong> euros</p>
+          <p class="card-text">Description : <strong><%= @animal.description %></strong></p>
+          <p class="card-text">specie : <strong><%= @animal.specie %></strong></p>
+          <%= link_to "Buy this", "#", class: 'btn-flat'%>
   </div>
   <i class="fas fa-undo-alt"><%= link_to "Retourner dans la liste", animals_path%></i>
 </div>
-
