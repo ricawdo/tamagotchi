@@ -9,7 +9,7 @@ class AnimalsController < ApplicationController
   end
 
   def new
-    @animal = Animal.all
+    @animal = Animal.new
   end
 
   def create
