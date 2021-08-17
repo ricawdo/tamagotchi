@@ -3,7 +3,7 @@
   box-shadow: 0 1px 6px rgba(0,0,0,0.4);
   border-radius: 8px;
   background-color: white;
-  padding: 25px;
+  padding: 30px;
   margin-top: 60px;
   width: 500px;
 }
@@ -14,7 +14,7 @@
 }
 
 .details h1 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .search {
@@ -28,6 +28,9 @@
   &:active {
     background-color: red;
   }
+  margin-top: 10px;
+  margin-right: 20px;
+  text-align: center;
 }
 
 .name {
@@ -41,4 +44,12 @@
 .infos {
   border-bottom: 1px solid rgb(163, 161, 161);
   padding-bottom: 15px;
+}
+
+.datepicker {
+  width: 200px;
+}
+
+.btn-pay {
+text-align: center;
 }
