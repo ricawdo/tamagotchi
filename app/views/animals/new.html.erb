@@ -1,0 +1,13 @@
+<h3>Add a animal/annonce</h3>
+  <%= simple_form_for [@user, @bookmark] do |f| %>
+    <%= f.input :name, placeholder: 'Enter a name' %>
+    <%= f.input :breed, placeholder: 'Enter a breed' %>
+    <%= f.input :age, placeholder: 'Enter an age' %>
+    <%= f.input :price, placeholder: 'Enter a price' %>
+    <%= f.input :description, placeholder: 'Enter a description' %>
+    <%= f.input :specie, placeholder: 'Enter a specie' %>
+    <%= f.association :specie, %w[chat chien poules] %>
+    <%= f.input :adress, placeholder: 'Enter an address' %>
+    <%= f.input :poster_url, placeholder: 'Upload an picture' %>
+    <%= f.submit class: 'btn btn-flat' %>
+  <% end %>
