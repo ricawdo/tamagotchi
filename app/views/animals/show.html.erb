@@ -1,0 +1,14 @@
+<div id="c-show" class="container">
+  <img class="img-show" src="https://cvlaval.com/sites/default/files/carousel/chat-1.jpg" alt="...">
+  <div class="description-container">
+          <h3 class="card-title"><strong><%= @animal.name %></strong></h3>
+          <p class="card-text">Breed : <strong><%= @animal.breed %></strong></p>
+          <p class="card-text">Address : <strong><%= @animal.adress %></strong></p>
+          <p class="card-text">Age : <strong><%= @animal.age %></strong> year(s)</p>
+          <p class="card-text">Price : <strong><%= @animal.price %></strong> euros</p>
+          <p class="card-text">Description : <strong><%= @animal.description %></strong></p>
+          <p class="card-text">specie : <strong><%= @animal.specie %></strong></p>
+          <%= link_to "Buy this", "#", class: 'btn-flat'%>
+  </div>
+  <i class="fas fa-undo-alt"><%= link_to "Retourner dans la liste", animals_path%></i>
+</div>

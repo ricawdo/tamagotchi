@@ -8,8 +8,8 @@
 require "faker"
 
 puts 'Cleaning database...'
-User.destroy_all
 Animal.destroy_all
+User.destroy_all
 
 puts 'Creating wadi...'
 
@@ -36,10 +36,11 @@ puts 'Users OK!'
 puts 'Creating animals...'
 10.times do
   animal = Animal.new(
-    name: Faker::JapaneseMedia::OnePiece,
+    name: Faker::JapaneseMedia::OnePiece.character,
     breed: Faker::JapaneseMedia::DragonBall.race,
     age: rand(0..6),
-    description: Faker::Lorem.paragraphs,
+    price: rand(10..100),
+    description: Faker::Lorem.paragraph,
     specie: Faker::Creature::Animal.name,
     adress: Faker::Address.country,
     user: user

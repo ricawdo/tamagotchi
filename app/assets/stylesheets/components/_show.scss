@@ -1,0 +1,32 @@
+
+body {
+  background-color: #fdf1ec;
+}
+
+#c-show {
+  display: flex;
+  background-color: white;
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  margin-top: 200px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.description-container {
+  display: block;
+  padding: 20px;
+}
+
+.img-show {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.description-container .btn-flat {
+  font-weight: bold;
+}
+
+.description-container {
+  font-size: 20px;
+}

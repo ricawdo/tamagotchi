@@ -12,7 +12,14 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
-
+.container .card {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 14px;
+  padding: 3px;
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
 
 .cards {
   display: grid;
@@ -24,7 +31,7 @@
 }
 
 .card a {
-  color: red;
+  font-weight: bold;
 }
 
 // Smallest device
