@@ -1,0 +1,44 @@
+.details, .card-details {
+  border: 1px solid $green;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.4);
+  border-radius: 8px;
+  background-color: white;
+  padding: 25px;
+  margin-top: 60px;
+  width: 500px;
+}
+
+.card-details {
+  margin-left: 80px;
+  width: 500px;
+}
+
+.details h1 {
+  margin-bottom: 10px;
+}
+
+.search {
+  margin-bottom: 40px;
+}
+
+.btn-new {
+  &:focus {
+    background-color: yellow;
+  }
+  &:active {
+    background-color: red;
+  }
+}
+
+.name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  border-bottom: 1px solid rgb(163, 161, 161);
+  padding-bottom: 15px;
+}
+
+.infos {
+  border-bottom: 1px solid rgb(163, 161, 161);
+  padding-bottom: 15px;
+}
