@@ -1,4 +1,9 @@
-<ul>
+<div class="content" id="contain-map-and-animals" >
+
+  <div class="map">
+    <%= image_tag "map.jpeg" %>
+  </div>
+
   <div class="cards">
     <% @animals.each do |animal| %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(animal.photo.key) %>)">
@@ -6,4 +11,4 @@
       </div>
     <% end %>
   </div>
-</ul>
+</div>

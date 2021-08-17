@@ -22,7 +22,7 @@ class AnimalsController < ApplicationController
     else
       render :new
     end
-  
+
   end
 
   private
