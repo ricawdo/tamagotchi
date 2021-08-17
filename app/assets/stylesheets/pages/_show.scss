@@ -1,5 +1,5 @@
 
-body {
+#body-show {
   background-color: #fdf1ec;
 }
 
@@ -21,6 +21,9 @@ body {
 .img-show {
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.15);
+  width: 376px;
+  height: 376px;
+  object-fit: cover;
 }
 
 .description-container .btn-flat {

@@ -9,6 +9,15 @@ class AnimalPolicy < ApplicationPolicy
     return true
   end
 
+  def new?
+    return true
+  end
+
+  def create?
+    return true
+  end
+
+
   # def edit?
   #   record.user == user
   # end

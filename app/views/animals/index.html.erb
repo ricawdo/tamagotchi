@@ -2,6 +2,13 @@
 
   <div class="map">
     <%= image_tag "map.jpeg" %>
+<ul>
+  <div class="cards">
+    <% @animals.each do |animal| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(animal.photo.key) %>)">
+        <%= link_to animal.name, animal_path(animal) %>
+      </div>
+    <% end %>
   </div>
   <ul>
     <div class="cards flex-column">
