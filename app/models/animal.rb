@@ -1,5 +1,6 @@
 class Animal < ApplicationRecord
   belongs_to :user
   has_many :bookings
+  has_one_attached :photo
   SPECIE = %w(chat chien poule)
 end

@@ -7,7 +7,7 @@
     <%= f.input :description, placeholder: 'Enter a description' %>
     <%= f.input :specie, collection: Animal::SPECIE %>
     <%= f.input :adress, placeholder: 'Enter an address' %>
-    <%= f.input :poster_url, placeholder: 'Upload an picture' %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit class: 'btn btn-flat' %>
     <%= link_to "Back", animals_path %>
   <% end %>
