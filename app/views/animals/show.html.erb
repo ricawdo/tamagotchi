@@ -1,6 +1,6 @@
 <body id="body-show">
   <div id="c-show" class="container">
-    <img class="img-show" src="https://cvlaval.com/sites/default/files/carousel/chat-1.jpg" alt="...">
+    <%= cl_image_tag @animal.photo.key, class:"img-show" %>
     <div class="description-container">
             <h3 class="card-title"><strong><%= @animal.name %></strong></h3>
             <p class="card-text">Breed : <strong><%= @animal.breed %></strong></p>
