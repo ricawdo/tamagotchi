@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="details">
+  <h2>Détails de la commande</h2>
+    <div class="container-form">
+      <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+        <h2>Flatpickr Demo</h2>
+
+        <%= simple_form_for :search, method: "get" do |f| %>
+        <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.button :submit, "Go", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  <h2>Assurance :</h2>
+  <h2>Mode de paiement :</h2>
+  <button type="button" class="btn btn-outline-success">CB</button>
+  <button type="button" class="btn btn-outline-success">Paypal</button>
+
+  </div>
+    <div class="card-details">
+      <ul>
+        <div style="background-image: url('<%= animal.poster_url %>'); width: 100px; height: 100px; background-size : contain;"></div>
+        <li><%= @animal.name %></li>
+        <li><%= @animal.rating %></li></li>
+        <li><%= @animal.address %></li>
+        <h2>Prix</h2>
+        <h2>Total</h2>
+
+      </ul>
+    </div>
+</div>
