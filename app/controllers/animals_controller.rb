@@ -1,5 +1,7 @@
 class AnimalsController < ApplicationController
   def index
-    @animals = Animal.all
+    @animals = policy_scope(Animal)
   end
+
+
 end
