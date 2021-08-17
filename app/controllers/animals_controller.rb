@@ -3,5 +3,7 @@ class AnimalsController < ApplicationController
     @animals = policy_scope(Animal)
   end
 
-
+  def show
+    @animal = Animal.find(params[:id])
+  end
 end
