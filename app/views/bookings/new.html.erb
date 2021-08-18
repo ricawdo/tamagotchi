@@ -1,0 +1,37 @@
+<div class="container d-flex">
+  <div class="details">
+  <h2>Date de la location</h2>
+    <div class="container-form">
+      <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+        <%= simple_form_for :search, method: "get" do |f| %>
+        <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <% end %>
+      </div>
+    </div>
+  <h2>Mode de paiement :</h2>
+  <div class="btn-pay">
+  <button type="button" class="btn-new btn btn-outline-success">CB</button>
+  <button type="button" class="btn-new btn btn-outline-success">Paypal</button>
+  </div>
+
+  </div>
+    <div class="card-details">
+
+        <%# <div style="background-image: url('<%= @animal.photo.key'); width: 100px; height: 100px; background-size : contain;"></div> %> %>
+        <p class="name"><%= @animal.name %></p>
+        <p class="infos"><u><strong>Description :</strong></u> <%= @animal.description %></p>
+        <p class="infos"><u><strong>Address :</strong></u> <%= @animal.adress %></p>
+        <p class="infos"><u><strong>Specie :</strong></u> <%= @animal.specie %></p>
+
+        <div class="price">
+          <h2>Prix : <span id="animal-price"><%= @animal.price %></span> $</h2>
+          <h2>Jour(s) : <span id="total-days">1</span></h2>
+          <h2>Total : <span id="total-price"><%= @animal.price %></span> $</h2>
+          <button class="btn-flat btn-flat:hover text-center" type="submit">Confirm paiement<%= link_to "", animals_path %></button>
+        </div>
+
+
+
+    </div>
+</div>
