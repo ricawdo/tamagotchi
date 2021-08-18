@@ -13,16 +13,20 @@ const computePrice = () => {
     const startDate = new Date(start.value);
     const endDate = new Date(end.value);
 
+    if (endDate != 'Invalid Date') {
 
+      document.getElementById('btn-payment').classList.remove('not-active');
+      document.getElementById('btn-payment').disabled = false;
+      // compute the days span between start and end
+      const days = Math.round((endDate - startDate) / (1000 * 60 * 60 * 24));
+      // update number of day value in DOM
+      document.querySelector('#total-days').innerHTML = days;
+      // get total price DOM element
+      const totalPrice = document.querySelector('#total-price');
+      //update total price value in DOM
+      totalPrice.innerHTML = days * animalPrice
+    }
 
-    // compute the days span between start and end
-    const days = Math.round((endDate - startDate) / (1000 * 60 * 60 * 24));
-    // update number of day value in DOM
-    document.querySelector('#total-days').innerHTML = days;
-    // get total price DOM element
-    const totalPrice = document.querySelector('#total-price');
-    //update total price value in DOM
-    totalPrice.innerHTML = days * animalPrice
   }
 
   // update DOM on end date change
