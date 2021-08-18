@@ -3,8 +3,8 @@
   box-shadow: 0 1px 6px rgba(0,0,0,0.4);
   border-radius: 8px;
   background-color: white;
-  padding: 30px;
-  margin-top: 60px;
+  padding: 25px;
+  margin-top: 40px;
   width: 500px;
 }
 
@@ -30,14 +30,15 @@
 .name {
   text-align: center;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
   border-bottom: 1px solid rgb(163, 161, 161);
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .infos {
   border-bottom: 1px solid rgb(163, 161, 161);
-  padding-bottom: 15px;
+  padding-bottom: 8px;
+  font-size: 14px;
 }
 
 .datepicker {
@@ -51,11 +52,29 @@ text-align: center;
 
 .card-details h2 {
   font-family: "Montserrat";
-  font-size: 25px;
-  margin-bottom: 25px;
+  font-size: 20px;
+  margin-bottom: 16px;
 }
 
 .details h2 {
   font-family: "Montserrat";
   margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.img-booking  .img-show {
+  height: auto;
+  width: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 8px;
+
+}
+
+.img-booking {
+  text-align: center;
+}
+
+.details {
+  background-color: transparent;
 }
