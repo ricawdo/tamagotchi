@@ -1,0 +1,62 @@
+<div class="container d-flex">
+  <div class="details">
+  <h2>Date de la location</h2>
+    <div class="container-form">
+      <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+        <%= simple_form_for :search, method: "get" do |f| %>
+        <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <% end %>
+      </div>
+    </div>
+  <h2>Mode de paiement :</h2>
+  <div class="btn-pay">
+  <button type="button" class="btn-new btn btn-outline-success">CB</button>
+  <button type="button" class="btn-new btn btn-outline-success">Paypal</button>
+  </div>
+
+  </div>
+    <div class="card-details">
+      <div class="img-booking">
+        <%= cl_image_tag @animal.photo.key, class:"img-show" %>
+      </div>
+        <p class="name"><%= @animal.name %></p>
+        <p class="infos"><u><strong>Description :</strong></u> <%= @animal.description %></p>
+        <p class="infos"><u><strong>Address :</strong></u> <%= @animal.adress %></p>
+        <p class="infos"><u><strong>Specie :</strong></u> <%= @animal.specie %></p>
+
+        <div class="price">
+          <h2>Prix : <span id="animal-price"><%= @animal.price %></span> $</h2>
+          <h2>Jour(s) : <span id="total-days">1</span></h2>
+          <h2>Total : <span id="total-price"><%= @animal.price %></span> $</h2>
+          <div class="btn-booking">
+          <button type="button" class="btn btn-flat" data-toggle="modal" data-target="#exampleModalCenter">
+            Confirm paiement
+          </button>
+          </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLongTitle">Félicitation</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3>Votre commande est confirmée</h3>
+      </div>
+      <div class="modal-footer">
+        <%= link_to "Fermer", root_path, class: "btn btn-flat"  %>
+      </div>
+    </div>
+  </div>
+</div>
