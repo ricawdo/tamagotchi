@@ -3,7 +3,7 @@ class AnimalsController < ApplicationController
     @animals = policy_scope(Animal)
     # the `geocoded` scope filters only animals with coordinates (latitude & longitude)
     if params[:name].present? || params[:specie].present?
-      @animals = @animals.near(params[:adress], 30)
+      @animals = @animals.near(params[:adress], 50)
       @animals = @animals.where(specie: params[:specie])
     end
     @markers = @animals.geocoded.map do |animal|
