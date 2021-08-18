@@ -17,8 +17,9 @@
 
   </div>
     <div class="card-details">
-
-        <%# <div style="background-image: url('<%= @animal.photo.key'); width: 100px; height: 100px; background-size : contain;"></div> %> %>
+      <div class="img-booking">
+        <%= cl_image_tag @animal.photo.key, class:"img-show" %>
+      </div>
         <p class="name"><%= @animal.name %></p>
         <p class="infos"><u><strong>Description :</strong></u> <%= @animal.description %></p>
         <p class="infos"><u><strong>Address :</strong></u> <%= @animal.adress %></p>
@@ -28,7 +29,9 @@
           <h2>Prix : <span id="animal-price"><%= @animal.price %></span> $</h2>
           <h2>Jour(s) : <span id="total-days">1</span></h2>
           <h2>Total : <span id="total-price"><%= @animal.price %></span> $</h2>
-          <button class="btn-flat btn-flat:hover text-center" type="submit">Confirm paiement<%= link_to "", animals_path %></button>
+          <div class="btn-booking">
+          <button class="btn-flat btn-flat:hover text-center not-active" type="submit" disabled id=>Confirm paiement<%= link_to "", animals_path %></button>
+          </div>
         </div>
 
 
