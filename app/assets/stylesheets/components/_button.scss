@@ -4,9 +4,13 @@
   border-radius: 4px;
   background: $green;
   transition: background 0.3s ease;
+  border: 1px;
+  font-weight: bold;
 }
 
 .btn-flat:hover {
   background: #1BCB7F;
   color: white;
+  border: 1px;
+  font-weight: bold;
 }

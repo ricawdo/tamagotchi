@@ -2,23 +2,15 @@
   <div class="container">
     <div class="search-home">
     <h1>Have a break, Rent a pet</h1>
-      <form class="form-inline md-form mr-auto mb-4">
-      <input class="form-control mr-sm-2" type="text" placeholder="Enter the city" aria-label="Search">
-        <div class="dropdown">
-        <button class="btn btn-light dropdown-toggle mr-sm-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Dog</a>
-          <a class="dropdown-item" href="#">Cat</a>
-          <a class="dropdown-item" href="#">Lamb</a>
-          <a class="dropdown-item" href="#">Chicken</a>
-          <a class="dropdown-item" href="#">Fish</a>
-          </div>
-        </div>
-
-        <button class="btn-flat btn-flat:hover" type="submit">Search<%= link_to "", animals_path %></button>
-         <%= link_to "Search", animals_path, class: "btn-flat btn-flat:hover" %>
-
-      </form>
+      <%= form_tag animals_path, method: :get, class: "form-inline md-form mr-auto mb-4" do %>
+        <%= text_field_tag :adress,
+          params[:adress],
+          class: "form-control mr-sm-2",
+          placeholder: "Address"
+        %>
+        <%= select_tag 'specie', options_for_select(Animal::SPECIE), class: "form-control mr-sm-2" %>
+        <%= submit_tag "Search", class: "btn-flat btn-flat:hover border-0 font-weight-bold" %>
+      <% end %>
     </div>
   </div>
 </div>

@@ -10,8 +10,11 @@
             <p class="card-text">Price : <strong><%= @animal.price %></strong> euros</p>
             <p class="card-text">Description : <strong><%= @animal.description %></strong></p>
             <p class="card-text">specie : <strong><%= @animal.specie %></strong></p>
-            <%= link_to "Buy this", "#", class: 'btn-flat'%>
+            <%= link_to "Rent", "#", class: 'btn-flat'%>
     </div>
-    <i class="fas fa-undo-alt"><%= link_to "Retourner dans la liste", animals_path%></i>
+    <%# <a href="/animals"><i class="fas fa-undo-alt"></i></a> %>
+    <div class="back-btn">
+      <i class="fas fa-undo-alt"><%= link_to "Back", animals_path %></i>
+    </div>
   </div>
 </body>

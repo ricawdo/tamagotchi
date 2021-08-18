@@ -1,6 +1,10 @@
 class AnimalsController < ApplicationController
   def index
     @animals = policy_scope(Animal)
+    if params[:name].present? || params[:specie].present?
+      @animals = @animals.where(adress: params[:adress])
+      @animals = @animals.where(specie: params[:specie])
+    end
   end
 
   def show
