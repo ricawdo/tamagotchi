@@ -22,16 +22,6 @@ user = User.new(
 )
 user.save!
 
-puts 'Creating users...'
-10.times do
-  user = User.new(
-    first_name: Faker::Name,
-    last_name: Faker::Name,
-    email: Faker::Internet.email,
-    password: "123456"
-  )
-  user.save!
-end
 puts 'Users OK!'
 
 images = ['https://www.selection.ca/wp-content/uploads/2020/12/races-de-chiens-chiots-animaux-Corgi-gallois-Pembroke.jpg?fit=700,525',
@@ -46,22 +36,38 @@ images = ['https://www.selection.ca/wp-content/uploads/2020/12/races-de-chiens-c
   'https://www.caniprof.com/wp-content/uploads/2019/01/shiba-inu-2.jpg']
 
 puts 'Creating animals...'
-10.times do
-  animal = Animal.new(
-    name: Faker::JapaneseMedia::OnePiece.character,
-    breed: Faker::JapaneseMedia::DragonBall.race,
-    age: rand(0..6),
-    price: rand(10..100),
-    description: Faker::Lorem.paragraph,
-    specie: Faker::Creature::Animal.name,
-    adress: Faker::Address.country,
-    user: user
-  )
 
-  file = URI.open(images.sample)
-  animal.photo.attach(io: file, filename: 'image')
-  animal.save!
-end
+diane = Animal.new(name: 'Diane', breed: 'berger', age: 5, price: 67 ,description: 'Diane est un bon chien qui écoute quand on lui parle' ,specie: 'chien' ,adress: '10 avenue des champs elysées, paris', user: user)
+diane.photo.attach(io: URI.open(images.sample), filename: 'image')
+diane.save!
+
+colombo = Animal.new(name: 'Colombo', breed: 'poule pondeuse', age: 9, price: 5 ,description: 'colombo est une detective poule, une nouvelle race de poule' ,specie: 'Poule' ,adress: '11 villa Gaudelet, paris', user: user)
+colombo.photo.attach(io: URI.open(images.sample), filename: 'image')
+colombo.save!
+
+miaouss = Animal.new(name: 'Miaouss', breed: 'poisson clown', age: 2, price: 85 ,description: 'Miaouss est un beau poisson qui passe son temps rien faire' ,specie: 'poisson' ,adress: '13 villa Gaudelet, paris', user: user)
+miaouss.photo.attach(io: URI.open(images.sample), filename: 'image')
+miaouss.save!
+
+bobby = Animal.new(name: 'Bobby', breed: 'shiba', age: 1, price: 67 ,description: 'Bobby est un bon chien, aime jouer et courrir' ,specie: 'chien' ,adress: '16 villa Gaudelet, paris', user: user)
+bobby.photo.attach(io: URI.open(images.sample), filename: 'image')
+bobby.save!
+
+walid = Animal.new(name: 'Walid', breed: 'poule naine', age: 2, price: 5 ,description: 'belle poule pondeuse' ,specie: 'Poule' ,adress: '5 rue caplat, paris', user: user)
+walid.photo.attach(io: URI.open(images.sample), filename: 'image')
+walid.save!
+
+oneal = Animal.new(name: 'Oneal', breed: 'chaton', age: 2, price: 85 ,description: 'Oneal est un très beau chat' ,specie: 'Chat' ,adress: '2 rue Oberkampf, paris', user: user)
+oneal.photo.attach(io: URI.open(images.sample), filename: 'image')
+oneal.save!
+
+andrea = Animal.new(name: 'Andrea', breed: 'poule', age: 2, price: 5 ,description: 'belle poule pondeuse' ,specie: 'Poule' ,adress: '10 rue Oberkampf, paris', user: user)
+andrea.photo.attach(io: URI.open(images.sample), filename: 'image')
+andrea.save!
+
+benoit = Animal.new(name: 'Benoit', breed: 'pitbull', age: 2, price: 85 ,description: 'Benoit est un chien débile (mais drole)' ,specie: 'Chien' ,adress: '33 rue Oberkampf, paris', user: user)
+benoit.photo.attach(io: URI.open(images.sample), filename: 'image')
+benoit.save!
 
 puts 'Animals OK!'
 puts 'Finished !'
