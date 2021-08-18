@@ -13,20 +13,14 @@
   width: 500px;
 }
 
-.details h1 {
-  margin-bottom: 15px;
-}
-
 .search {
   margin-bottom: 40px;
 }
 
 .btn-new {
   &:focus {
-    background-color: yellow;
-  }
-  &:active {
-    background-color: red;
+    background-color: $green;
+    color:white;
   }
   margin-top: 10px;
   margin-right: 20px;
@@ -52,4 +46,16 @@
 
 .btn-pay {
 text-align: center;
+}
+
+
+.card-details h2 {
+  font-family: "Montserrat";
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.details h2 {
+  font-family: "Montserrat";
+  margin-bottom: 20px;
 }

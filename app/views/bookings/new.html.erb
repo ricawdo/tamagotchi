@@ -1,6 +1,6 @@
 <div class="container d-flex">
   <div class="details">
-  <h2>Détails de la commande</h2>
+  <h2>Date de la location</h2>
     <div class="container-form">
       <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
         <%= simple_form_for :search, method: "get" do |f| %>
@@ -18,15 +18,19 @@
   </div>
     <div class="card-details">
 
-        <div style="background-image: url('<%= @animal.poster_url %>'); width: 100px; height: 100px; background-size : contain;"></div>
+        <%# <div style="background-image: url('<%= @animal.photo.key'); width: 100px; height: 100px; background-size : contain;"></div> %> %>
         <p class="name"><%= @animal.name %></p>
-        <p class="infos"><u>Description :</u> <%= @animal.description %></p>
-        <p class="infos">Adress : <%= @animal.adress %></p>
-        <p class="infos">Specie : <%= @animal.specie %></p>
+        <p class="infos"><u><strong>Description :</strong></u> <%= @animal.description %></p>
+        <p class="infos"><u><strong>Address :</strong></u> <%= @animal.adress %></p>
+        <p class="infos"><u><strong>Specie :</strong></u> <%= @animal.specie %></p>
 
-        <h2>Prix : <span id="animal-price"><%= @animal.price %></span> $</h2>
-        <h2>Jour(s) : <span id="total-days">1</span></h2>
-        <h2>Total : <span id="total-price"><%= @animal.price %></span> $</h2>
+        <div class="price">
+          <h2>Prix : <span id="animal-price"><%= @animal.price %></span> $</h2>
+          <h2>Jour(s) : <span id="total-days">1</span></h2>
+          <h2>Total : <span id="total-price"><%= @animal.price %></span> $</h2>
+          <button class="btn-flat btn-flat:hover text-center" type="submit">Confirm paiement<%= link_to "", animals_path %></button>
+        </div>
+
 
 
     </div>

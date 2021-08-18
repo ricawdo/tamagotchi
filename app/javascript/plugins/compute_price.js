@@ -13,6 +13,8 @@ const computePrice = () => {
     const startDate = new Date(start.value);
     const endDate = new Date(end.value);
 
+
+
     // compute the days span between start and end
     const days = Math.round((endDate - startDate) / (1000 * 60 * 60 * 24));
     // update number of day value in DOM
