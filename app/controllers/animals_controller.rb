@@ -1,9 +1,14 @@
 class AnimalsController < ApplicationController
   def index
     @animals = policy_scope(Animal)
+    # the `geocoded` scope filters only animals with coordinates (latitude & longitude)
     if params[:name].present? || params[:specie].present?
-      @animals = @animals.where(adress: params[:adress])
+      @animals = @animals.near(params[:adress], 30)
       @animals = @animals.where(specie: params[:specie])
+    end
+    @markers = @animals.geocoded.map do |animal|
+      { lat: animal.latitude, lng: animal.longitude  }
+      #info_window: render_to_string(partial: "info_window", locals: { animal: animal })
     end
   end
 
