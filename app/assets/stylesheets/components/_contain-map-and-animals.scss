@@ -1,0 +1,10 @@
+#contain-map-and-animals {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
