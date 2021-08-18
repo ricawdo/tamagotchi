@@ -4,6 +4,7 @@ const computePrice = () => {
   // get end date input DOM element
   const end = document.getElementById("search_ends_at");
   // get daily animal price value + convert to Number
+  console.log(document.getElementById('animal-price'));
   const animalPrice = Number.parseInt(document.getElementById('animal-price').innerHTML, 10);
   // add event listener on end input (change) => the trigger is any change to the end date input
 

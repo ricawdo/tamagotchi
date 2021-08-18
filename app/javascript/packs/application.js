@@ -34,7 +34,9 @@ import { computePrice } from "../plugins/compute_price";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  initMapbox();
+  if (document.querySelector(".map")) {
+    initMapbox();
+  }
   initFlatpickr();
   computePrice();
 });
