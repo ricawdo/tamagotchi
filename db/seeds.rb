@@ -37,35 +37,35 @@ images = ['https://www.selection.ca/wp-content/uploads/2020/12/races-de-chiens-c
 
 puts 'Creating animals...'
 
-diane = Animal.new(name: 'Rox', breed: 'berger', age: 5, price: 67 ,description: 'Rox est un bon chien qui écoute quand on lui parle' ,specie: chien, adress: 'paris', user: user)
+diane = Animal.new(name: 'Rox', breed: 'berger', age: 5, price: 67 ,description: 'Rox est un bon chien qui écoute quand on lui parle' ,specie: 'chien', adress: '16 villa gaudelet paris', user: user)
 diane.photo.attach(io: URI.open(images.sample), filename: 'image')
 diane.save!
 
-colombo = Animal.new(name: 'Colombo', breed: 'poule pondeuse', age: 9, price: 5 ,description: 'colombo est une detective poule, une nouvelle race de poule' ,specie: 'Poule' ,adress: 'paris', user: user)
+colombo = Animal.new(name: 'Colombo', breed: 'poule pondeuse', age: 9, price: 5 ,description: 'colombo est une detective poule, une nouvelle race de poule' ,specie: 'poule' ,adress: '11 rue de rennes paris', user: user)
 colombo.photo.attach(io: URI.open(images.sample), filename: 'image')
 colombo.save!
 
-miaouss = Animal.new(name: 'Miaouss', breed: 'poisson clown', age: 2, price: 85 ,description: 'Miaouss est un beau poisson qui passe son temps rien faire' ,specie: 'poisson' ,adress: 'paris', user: user)
+miaouss = Animal.new(name: 'Miaouss', breed: 'poisson clown', age: 2, price: 85 ,description: 'Miaouss est un beau poisson qui passe son temps rien faire' ,specie: 'poisson' ,adress: '84 boulevard raspail paris', user: user)
 miaouss.photo.attach(io: URI.open(images.sample), filename: 'image')
 miaouss.save!
 
-bobby = Animal.new(name: 'Bobby', breed: 'shiba', age: 1, price: 67 ,description: 'Bobby est un bon chien, aime jouer et courrir' ,specie: 'chien' ,adress: 'paris', user: user)
+bobby = Animal.new(name: 'Bobby', breed: 'shiba', age: 1, price: 67 ,description: 'Bobby est un bon chien, aime jouer et courrir' ,specie: 'chien' ,adress: '16 avenue foch paris', user: user)
 bobby.photo.attach(io: URI.open(images.sample), filename: 'image')
 bobby.save!
 
-walid = Animal.new(name: 'Walid', breed: 'poule naine', age: 2, price: 5 ,description: 'belle poule pondeuse' ,specie: 'Poule' ,adress: 'paris', user: user)
+walid = Animal.new(name: 'Walid', breed: 'poule naine', age: 2, price: 5 ,description: 'belle poule pondeuse' ,specie: 'poule' ,adress: '18 boulevard de la chapelle paris', user: user)
 walid.photo.attach(io: URI.open(images.sample), filename: 'image')
 walid.save!
 
-oneal = Animal.new(name: 'Oneal', breed: 'chaton', age: 2, price: 85 ,description: 'Oneal est un très beau chat' ,specie: 'Chat' ,adress: 'paris', user: user)
+oneal = Animal.new(name: 'Oneal', breed: 'chaton', age: 2, price: 85 ,description: 'Oneal est un très beau chat' ,specie: 'chat' ,adress: '16 avenue des champs elysées paris', user: user)
 oneal.photo.attach(io: URI.open(images.sample), filename: 'image')
 oneal.save!
 
-andrea = Animal.new(name: 'Andrea', breed: 'poule', age: 2, price: 5 ,description: 'belle poule pondeuse' ,specie: 'Poule' ,adress: 'paris', user: user)
+andrea = Animal.new(name: 'Andrea', breed: 'poule', age: 2, price: 5 ,description: 'belle poule pondeuse' ,specie: 'poule' ,adress: '10 rue de paris paris', user: user)
 andrea.photo.attach(io: URI.open(images.sample), filename: 'image')
 andrea.save!
 
-benoit = Animal.new(name: 'Benoit', breed: 'pitbull', age: 2, price: 85 ,description: 'Benoit est un chien débile (mais drole)' ,specie: 'Chien' ,adress: 'paris', user: user)
+benoit = Animal.new(name: 'Benoit', breed: 'pitbull', age: 2, price: 85 ,description: 'Benoit est un chien débile (mais drole)' ,specie: 'chien' ,adress: '5 rue de la paix paris', user: user)
 benoit.photo.attach(io: URI.open(images.sample), filename: 'image')
 benoit.save!
 
