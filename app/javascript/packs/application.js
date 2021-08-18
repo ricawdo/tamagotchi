@@ -39,5 +39,7 @@ document.addEventListener('turbolinks:load', () => {
     initMapbox();
   }
   initFlatpickr();
-  computePrice();
+  if (document.getElementById('search_starts_at')) {
+    computePrice();
+  }
 });
