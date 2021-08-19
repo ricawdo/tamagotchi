@@ -29,10 +29,28 @@
           <div class="row border g-0 rounded">
               <div class="col p-4">
                   <h3>Les Bookings en attente</h3>
-                  <% @inprogress_bookings.each do |booking|%>
-                    <%= booking.start_date %>
-                  <% end %>
-                  
+                <% @inprogress_bookings.each do |booking|%>
+                  <div class="tout d-flex justify-content-around align-items-center">
+                    <div class="box-animal">
+                     <strong><h1>Animal : </h1></strong>
+                      <h3 class="card-title"><strong><%= booking.animal.name %></strong></h3>
+                        <p class="card-text">breed : <strong><%= booking.animal.breed %></strong></p>
+                        <p class="card-text">Address : <strong><%= booking.animal.adress %></strong></p>
+                        <p class="card-text">Age : <strong><%= booking.animal.age %></strong> year(s)</p>
+                        <p class="card-text">Price : <strong><%= booking.animal.price %></strong> euros</p>
+                        <p class="card-text">Description : <strong><%= booking.animal.description %></strong></p>
+                        <p class="card-text">specie : <strong><%= booking.animal.specie %></strong></p>
+                    </div>
+                    <div class="box-user">
+                       <strong><h1>User : </h1></strong>
+                      <div class="d-flex py-3">
+                      <h3 class="card-title"><strong><%= booking.animal.user.first_name %></strong></h3>
+                      <h3 class="card-title"><strong><%= booking.animal.user.last_name %></strong></h3>   
+                      </div>
+                    </div>
+                    <%= link_to "valider le booking", validate_booking_booking_path(booking), class: "btn-flat", id:"for-validate"%>
+                  </div>
+                <% end %>
               </div>
           </div>
       </div>
@@ -40,6 +58,27 @@
           <div class="row border g-0 rounded">
               <div class="col p-4">
                   <h3>Les Bookings validés</h3>
+                  <% @validated_bookings.each do |booking|%>
+                  <div class="tout d-flex justify-content-around align-items-center">
+                    <div class="box-animal">
+                     <strong><h1>Animal : </h1></strong>
+                      <h3 class="card-title"><strong><%= booking.animal.name %></strong></h3>
+                        <p class="card-text">breed : <strong><%= booking.animal.breed %></strong></p>
+                        <p class="card-text">Address : <strong><%= booking.animal.adress %></strong></p>
+                        <p class="card-text">Age : <strong><%= booking.animal.age %></strong> year(s)</p>
+                        <p class="card-text">Price : <strong><%= booking.animal.price %></strong> euros</p>
+                        <p class="card-text">Description : <strong><%= booking.animal.description %></strong></p>
+                        <p class="card-text">specie : <strong><%= booking.animal.specie %></strong></p>
+                    </div>
+                    <div class="box-user">
+                       <strong><h1>User : </h1></strong>
+                      <div class="d-flex py-3">
+                      <h3 class="card-title"><strong><%= booking.animal.user.first_name %></strong></h3>
+                      <h3 class="card-title"><strong><%= booking.animal.user.last_name %></strong></h3>   
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
               </div>
           </div>
       </div>
