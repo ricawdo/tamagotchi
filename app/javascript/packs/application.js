@@ -30,6 +30,7 @@ import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initFlatpickr } from "../plugins/flatpickr";
 import { computePrice } from "../plugins/compute_price";
+import { initAutocomplete} from "../plugins/init_autocomplete";
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -41,5 +42,9 @@ document.addEventListener('turbolinks:load', () => {
   initFlatpickr();
   if (document.getElementById('search_starts_at')) {
     computePrice();
+  }
+  const addressInput = document.getElementById('animal_address')
+  if (addressInput) {
+    initAutocomplete();
   }
 });
