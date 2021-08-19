@@ -32,7 +32,25 @@ skip_before_action :authenticate_user!, only: [ :index, :show ]
     else
       render :new
     end
+  end
 
+  def edit
+    @animal = Animal.find(params[:id])
+    authorize @animal
+  end
+
+  def update
+    @animal = Animal.find(params[:id])
+    @animal.update(animal_params)
+    redirect_to animal_path(@animal)
+    authorize @animal
+  end
+
+  def destroy
+    @animal = Animal.find(params[:id])
+    @animal.destroy
+    redirect_to animals_path
+    authorize @animal
   end
 
   private

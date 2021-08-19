@@ -1,0 +1,49 @@
+.dimension {
+    width: 500px;
+    height: 300px;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: gray;
+    color: #fff;
+    font-weight: bold;
+    border: 3px solid black;
+}
+
+.nav-tabs .nav-link {
+    background-color: rgba(128, 128, 128, 0.397);
+    color: white;
+    font-weight: bold;
+    border: 3px solid black;
+    margin-right: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.nav-tabs .nav-link:hover {
+    border: 3px solid black;
+}
+
+.tab-content {
+    border: 3px solid black;
+    border-radius: 5PX;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.border {
+  border: 0px solid #dee2e6 !important;
+}
+
+.shadow-sm {
+  box-shadow: 0px;
+}
+
+.nav-tabs {
+  border-bottom: 0px solid #dee2e6;
+}
+
+.content {
+  margin-bottom: 20px;
+  padding: 20px;
+}
