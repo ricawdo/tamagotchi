@@ -12,4 +12,5 @@ Rails.application.routes.draw do
       get "validate_booking"
     end
   end
+  resources :reviews, only: [:new, :create]
 end
