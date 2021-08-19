@@ -7,28 +7,27 @@
     background-color: gray;
     color: #fff;
     font-weight: bold;
-    border: 3px solid black;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5pX;
 }
 
 .nav-tabs .nav-link {
     background-color: rgba(128, 128, 128, 0.397);
     color: white;
     font-weight: bold;
-    border: 3px solid black;
     margin-right: 2rem;
     padding-left: 3rem;
     padding-right: 3rem;
-}
-
-.nav-tabs .nav-link:hover {
-    border: 3px solid black;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5pX;
 }
 
 .tab-content {
-    border: 3px solid black;
-    border-radius: 5PX;
+    border-radius: 5pX;
     padding: 20px;
     margin-top: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    background-color: rgba(131, 128, 128, 0.349);
 }
 
 .border {
@@ -46,4 +45,16 @@
 .content {
   margin-bottom: 20px;
   padding: 20px;
+}
+
+.box-animal .box-user {
+  padding: 20px 20px;
+}
+
+.tout {
+  margin: 20px 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-color: rgba(167, 211, 167, 0.267);
 }

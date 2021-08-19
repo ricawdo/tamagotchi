@@ -20,8 +20,13 @@ class BookingPolicy < ApplicationPolicy
 
   def update?
     @record.user == @user
+    return true
   end
 
+  def validate_booking?
+    return true
+  end
+  
   def edit?
     update?
   end

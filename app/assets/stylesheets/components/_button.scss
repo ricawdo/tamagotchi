@@ -2,14 +2,14 @@
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: $green;
+  background: #5C8B55;
   transition: background 0.3s ease;
-  border: 1px;
   font-weight: bold;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .btn-flat:hover {
-  background: #1BCB7F;
+  background: #2f7255;
   color: white;
   border: 1px;
   font-weight: bold;

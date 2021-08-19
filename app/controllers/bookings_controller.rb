@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-
   def new
     @animal = Animal.find(params[:animal_id])
     @booking = Booking.new
@@ -14,10 +13,17 @@ class BookingsController < ApplicationController
     authorize @booking
     @booking.user = current_user
     if @booking.save
-      redirect_to animal_path
+      redirect_to dashboard_path
     else
       render :new
     end
+  end
+
+  def validate_booking
+    authorize @booking
+    @booking = Booking.find(params[:id])
+    @booking.update(status: true)
+    redirect_to dashboard_path
   end
 
   private
