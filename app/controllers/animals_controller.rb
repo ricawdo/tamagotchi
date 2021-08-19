@@ -1,4 +1,6 @@
 class AnimalsController < ApplicationController
+skip_before_action :authenticate_user!, only: [ :index, :show ]
+
   def index
     @animals = policy_scope(Animal)
     # the `geocoded` scope filters only animals with coordinates (latitude & longitude)
