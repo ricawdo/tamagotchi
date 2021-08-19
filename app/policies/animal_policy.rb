@@ -17,8 +17,17 @@ class AnimalPolicy < ApplicationPolicy
     return true
   end
 
+  def edit?
+    record.user == user
+    return true
+  end
 
-  # def edit?
-  #   record.user == user
-  # end
+  def update?
+    return true
+  end
+
+  def destroy?
+    record.user == user
+    return true
+  end
 end

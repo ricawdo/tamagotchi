@@ -30,6 +30,7 @@ import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initFlatpickr } from "../plugins/flatpickr";
 import { computePrice } from "../plugins/compute_price";
+import { tabsDashboard } from "../plugins/tabs_dashboard";
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -38,8 +39,14 @@ document.addEventListener('turbolinks:load', () => {
   if (mapElement) {
     initMapbox();
   }
+
   initFlatpickr();
+
   if (document.getElementById('search_starts_at')) {
     computePrice();
   }
+
+  
+  tabsDashboard(click)
+  
 });
