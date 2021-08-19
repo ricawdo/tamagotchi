@@ -25,6 +25,9 @@ const computePrice = () => {
       const totalPrice = document.querySelector('#total-price');
       //update total price value in DOM
       totalPrice.innerHTML = days * animalPrice
+      document.getElementById('booking_start_date').value = document.getElementById('search_starts_at').value;
+      document.getElementById('booking_end_date').value = document.getElementById('search_ends_at').value;
+      console.log(document.getElementById('booking_start_date').value);
     }
 
   }

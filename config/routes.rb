@@ -7,4 +7,9 @@ Rails.application.routes.draw do
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :animals
+  resources :bookings do
+    member do
+      get "validate_booking"
+    end
+  end
 end
