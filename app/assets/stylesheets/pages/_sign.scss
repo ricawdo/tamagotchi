@@ -1,0 +1,34 @@
+.container-signup {
+  width: 40%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.form-inputs {
+  width: 300px;
+  text-align: center;
+
+}
+
+.container-signup h2 {
+  margin-top: 55px;
+  font-family: "Montserrat";
+}
+
+.form-actions  .btn-flat {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.container-signup .avatar {
+  width: 80px;
+  margin-top: 20px;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  position: absolute;
+  top: 70px;
+  left: 140px;
+}
