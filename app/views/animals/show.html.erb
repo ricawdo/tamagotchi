@@ -1,5 +1,4 @@
-
-<body id="body-show">
+<div id="body-show">
   <div id="c-show" class="container">
     <%= cl_image_tag @animal.photo.key, class:"img-show" %>
     <div class="description-container">
@@ -12,10 +11,10 @@
             <p class="card-text">specie : <strong><%= @animal.specie %></strong></p>
             <%= link_to "Rent", new_animal_booking_path(@animal), class: 'btn-flat'%>
             <%= link_to "Delete", animal_path(@animal), method: :delete, data: { confirm: "Are you sure?" } %>
-          <%= link_to "Edit", edit_animal_path(@animal) %>  
+          <%= link_to "Edit", edit_animal_path(@animal) %>
     </div>
     <div class="back-btn">
       <i class="fas fa-undo-alt"><%= link_to "Back", animals_path %></i>
     </div>
   </div>
-</body>
+</div>
