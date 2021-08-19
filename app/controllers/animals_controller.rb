@@ -7,8 +7,7 @@ class AnimalsController < ApplicationController
       @animals = @animals.where(specie: params[:specie])
     end
     @markers = @animals.geocoded.map do |animal|
-      { lat: animal.latitude, lng: animal.longitude  }
-      #info_window: render_to_string(partial: "info_window", locals: { animal: animal })
+      { lat: animal.latitude, lng: animal.longitude, info_window: render_to_string(partial: "info_window", locals: { animal: animal })}
     end
   end
 

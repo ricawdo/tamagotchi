@@ -7,4 +7,12 @@ class Animal < ApplicationRecord
 
   geocoded_by :adress
   after_validation :geocode, if: :will_save_change_to_adress?
+  validates :name, presence: true
+  validates :age, presence: true
+  validates :price, presence: true
+  validates :specie, presence: true
+  validates :adress, presence: true
+  validates :photo, presence: true
+  validates :description, length: { minimum: 20,
+    too_short: "%{count} characters is the minimum allowed" }
 end
