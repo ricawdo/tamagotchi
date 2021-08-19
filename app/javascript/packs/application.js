@@ -39,10 +39,13 @@ document.addEventListener('turbolinks:load', () => {
   if (mapElement) {
     initMapbox();
   }
+
   initFlatpickr();
+
   if (document.getElementById('search_starts_at')) {
     computePrice();
   }
+
   const addressInput = document.getElementById('animal_address')
   if (addressInput) {
     initAutocomplete();
