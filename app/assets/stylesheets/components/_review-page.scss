@@ -1,0 +1,36 @@
+.notification {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  background: white;
+  padding: 8px 40px;
+  border: 1px solid rgb(235,235,235);
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.notification .notification-content {
+  flex-grow: 1;
+  padding: 0 24px;
+}
+
+.notification p {
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.notification small {
+  color: #999999;
+  font-weight: bold;
+}
+
+.container-review {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.fas {
+  color: yellow;
+}

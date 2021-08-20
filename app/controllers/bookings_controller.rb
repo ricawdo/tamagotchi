@@ -20,8 +20,8 @@ class BookingsController < ApplicationController
   end
 
   def validate_booking
-    authorize @booking
     @booking = Booking.find(params[:id])
+    authorize @booking
     @booking.update(status: true)
     redirect_to dashboard_path
   end

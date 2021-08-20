@@ -94,6 +94,7 @@ oneal = Animal.new(name: 'Oneal', breed: 'chaton', age: 2, price: 85 ,descriptio
 oneal.photo.attach(io: URI.open(images[4]), filename: 'image')
 oneal.save!
 
+
 andrea = Animal.new(name: 'Andrea', breed: 'poule', age: 2, price: 5 ,description: 'Belle poule de déco' ,specie: 'poule' ,adress: '10 rue de paris paris', user: User.first)
 andrea.photo.attach(io: URI.open(images[12]), filename: 'image')
 andrea.save!
