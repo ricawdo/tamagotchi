@@ -87,8 +87,8 @@
                         <p class="card-text">Price : <strong><%= animal.price %></strong> euros</p>
                         <p class="card-text">Description : <strong><%= animal.description %></strong></p>
                         <p class="card-text">specie : <strong><%= animal.specie %></strong></p>
-                          <%= link_to "Delete", animal_path(animal), class: 'btn btn-flat', method: :delete, data: { confirm: "Are you sure?" } %>
                           <%= link_to "Edit", edit_animal_path(animal), class: 'btn btn-flat'%>
+                          <%= link_to "Delete", animal_path(animal), class: 'btn btn-flat', method: :delete, data: { confirm: "Are you sure?" } %>
                       </div>
                     </div>
                   <% end %>
