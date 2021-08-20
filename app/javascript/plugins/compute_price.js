@@ -35,11 +35,13 @@ const computePrice = () => {
   // update DOM on end date change
   end.addEventListener('change', (event) => {
     updateDom()
+    document.getElementById("end-date-booking").innerHTML = end.value
   });
 
   // update DOM on end date change
   start.addEventListener('change', (event) => {
     updateDom()
+    document.getElementById("start-date-booking").innerHTML = start.value
   });
 
 }

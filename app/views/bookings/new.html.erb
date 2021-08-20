@@ -46,16 +46,16 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLongTitle">Congratulations</h3>
+        <h3 class="modal-title" id="exampleModalLongTitle">Do you confirm your book ? 🐒</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <h3>Your order is confirmed! Have fun 🐒</h3>
+        <h3><p class="card-text">From: <strong><span id="start-date-booking"></span></strong> To: <strong><span id="end-date-booking"></span></strong></p></h3>
       </div>
       <div class="modal-footer">
-        <%= link_to "Fermer", new_booking_path, class: "btn btn-flat"  %>
+        <%= link_to "Cancel", animal_path(@animal), class: "btn btn-flat", id: "btn-red" %>
         <%= simple_form_for([@animal, Booking.new]) do |f| %>
           <%= f.input :start_date, as: :hidden, html5: true %>
           <%= f.input :end_date, as: :hidden, html5: true %>
