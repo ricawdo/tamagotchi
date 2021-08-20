@@ -94,7 +94,6 @@ oneal = Animal.new(name: 'Oneal', breed: 'chaton', age: 2, price: 85 ,descriptio
 oneal.photo.attach(io: URI.open(images[4]), filename: 'image')
 oneal.save!
 
-
 andrea = Animal.new(name: 'Andrea', breed: 'poule', age: 2, price: 5 ,description: 'Belle poule de déco' ,specie: 'poule' ,adress: '10 rue de paris paris', user: user_bruno)
 andrea.photo.attach(io: URI.open(images[12]), filename: 'image')
 andrea.save!
@@ -102,7 +101,6 @@ andrea.save!
 benoit = Animal.new(name: 'Benoit', breed: 'pitbull', age: 2, price: 85 ,description: 'Benoit, un chien débile (mais drole)' ,specie: 'chien' ,adress: '5 rue de la paix paris', user: user_bruno)
 benoit.photo.attach(io: URI.open(images[2]), filename: 'image')
 benoit.save!
-
 
 batman = Animal.new(name: 'Batman', breed: 'Shibat', age: 2, price: 200 ,description: 'Batman, un super chien' ,specie: 'chien' ,adress: '5 rue de la paix paris', user: user_ric)
 batman.photo.attach(io: URI.open(images[13]), filename: 'image')

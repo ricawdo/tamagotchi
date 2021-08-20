@@ -7,6 +7,9 @@
   border: 1px solid rgb(235,235,235);
   border-radius: 4px;
   margin-right: 20px;
+  &:hover {
+    transform: scale(1.03);
+  }
 }
 
 .notification .notification-content {
