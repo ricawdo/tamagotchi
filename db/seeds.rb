@@ -50,7 +50,7 @@ user_ric = User.new(
   password: "123456"
 )
 user_ric.save!
-puts 'Ricardo Created!'
+puts 'Ricardo Created !'
 
 
 images = ['https://www.selection.ca/wp-content/uploads/2020/12/races-de-chiens-chiots-animaux-Corgi-gallois-Pembroke.jpg?fit=700,525',
