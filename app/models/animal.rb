@@ -1,6 +1,6 @@
 class Animal < ApplicationRecord
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   has_one_attached :photo
   # SPECIE for "rent your pet", to do later
   SPECIE = %w(chat chien poule poisson )
