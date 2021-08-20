@@ -9,12 +9,12 @@
             <p class="card-text">Price : <strong><%= @animal.price %></strong> euros</p>
             <p class="card-text">Description : <strong><%= @animal.description %></strong></p>
             <p class="card-text">specie : <strong><%= @animal.specie %></strong></p>
-            <%= link_to "Rent", new_animal_booking_path(@animal), class: 'btn-flat'%>
-            <%= link_to "Delete", animal_path(@animal), method: :delete, data: { confirm: "Are you sure?" } %>
-          <%= link_to "Edit", edit_animal_path(@animal) %>
+            <% unless @animal.user == current_user %>
+              <%= link_to "Rent", new_animal_booking_path(@animal), class: 'btn btn-flat'%>
+            <% end %>
     </div>
     <div class="back-btn">
-      <i class="fas fa-undo-alt"><%= link_to "Back", animals_path %></i>
+      <i class="fas fa-undo-alt"><%= link_to "Back", root_path %></i>
     </div>
   </div>
 </div>

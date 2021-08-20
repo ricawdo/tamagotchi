@@ -1,11 +1,15 @@
 .details, .card-details {
   border: 1px solid $green;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.4);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 8px;
   background-color: white;
   padding: 25px;
   margin-top: 40px;
   width: 500px;
+}
+
+.details {
+  background-color: white;
 }
 
 .card-details {
@@ -75,6 +79,3 @@ text-align: center;
   text-align: center;
 }
 
-.details {
-  background-color: transparent;
-}
