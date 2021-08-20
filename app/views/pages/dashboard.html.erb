@@ -1,34 +1,28 @@
 <div class="content">
-  <h1>My Bookings</h1>
+  <h1>Hello, <%= "#{@user.first_name} #{@user.last_name}" %></h1>
 </div>
-
-
-
-
 <div class="container mt-2">
-  <h3 class="mb-3">Status :</h3>
   <ul class="nav nav-tabs">
       <li class="nav-item">
           <a class="nav-link active" data-bs-toggle="tab" href="#home">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
-            </svg> In progress</a>
+            </svg>Booking in progress</a>
       </li>
       <li class="nav-item">
           <a class="nav-link" data-bs-toggle="tab" href="#profile">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
-            </svg> Validated</a>
+            </svg>Booking validated</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" href="#contact">
+          <a class="nav-link3" data-bs-toggle="tab" href="#contact">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-            </svg> Finished</a>
+            </svg>My animals</a>
       </li>
   </ul>
   <div class="tab-content">
       <div class="tab-pane active" id="home">
           <div class="row border g-0 rounded">
               <div class="col p-4">
-                  <h3>Les Bookings en attente</h3>
                 <% @inprogress_bookings.each do |booking|%>
                   <div class="tout d-flex justify-content-around align-items-center">
                     <div class="box-animal">
@@ -36,8 +30,7 @@
                       <h3 class="card-title"><strong><%= booking.animal.name %></strong></h3>
                         <p class="card-text">breed : <strong><%= booking.animal.breed %></strong></p>
                         <p class="card-text">Address : <strong><%= booking.animal.adress %></strong></p>
-                        <p class="card-text">Age : <strong><%= booking.animal.age %></strong> year(s)</p>
-                        <p class="card-text">Price : <strong><%= booking.animal.price %></strong> euros</p>
+                        <p class="card-text">Date : <strong><%= "#{booking.start_date.strftime("%A, %b %d")} / #{booking.end_date.strftime("%A, %b %d")}"%></strong></p>
                         <p class="card-text">Description : <strong><%= booking.animal.description %></strong></p>
                         <p class="card-text">specie : <strong><%= booking.animal.specie %></strong></p>
                     </div>
@@ -57,7 +50,6 @@
       <div class="tab-pane" id="profile">
           <div class="row border g-0 rounded">
               <div class="col p-4">
-                  <h3>Les Bookings validés</h3>
                   <% @validated_bookings.each do |booking|%>
                   <div class="tout d-flex justify-content-around align-items-center">
                     <div class="box-animal">
@@ -65,8 +57,7 @@
                       <h3 class="card-title"><strong><%= booking.animal.name %></strong></h3>
                         <p class="card-text">breed : <strong><%= booking.animal.breed %></strong></p>
                         <p class="card-text">Address : <strong><%= booking.animal.adress %></strong></p>
-                        <p class="card-text">Age : <strong><%= booking.animal.age %></strong> year(s)</p>
-                        <p class="card-text">Price : <strong><%= booking.animal.price %></strong> euros</p>
+                        <p class="card-text">Date : <strong><%= "#{booking.start_date.strftime("%A, %b %d")} / #{booking.end_date.strftime("%A, %b %d")}"%></strong></p>
                         <p class="card-text">Description : <strong><%= booking.animal.description %></strong></p>
                         <p class="card-text">specie : <strong><%= booking.animal.specie %></strong></p>
                     </div>
@@ -85,7 +76,22 @@
       <div class="tab-pane" id="contact">
           <div class="row border g-0 rounded">
               <div class="col p-4">
-                  <h3>Les Bookings finis</h3>
+                  <% @animals.each do |animal|%>
+                    <div id="c-show-dashboard" class="container">
+                      <%= cl_image_tag animal.photo.key, class:"img-show-dashboard" %>
+                      <div class="description-container">
+                        <h3 class="card-title"><strong><%= animal.name %></strong></h3>
+                        <p class="card-text">breed : <strong><%= animal.breed %></strong></p>
+                        <p class="card-text">Address : <strong><%= animal.adress %></strong></p>
+                        <p class="card-text">Age : <strong><%= animal.age %></strong> year(s)</p>
+                        <p class="card-text">Price : <strong><%= animal.price %></strong> euros</p>
+                        <p class="card-text">Description : <strong><%= animal.description %></strong></p>
+                        <p class="card-text">specie : <strong><%= animal.specie %></strong></p>
+                          <%= link_to "Edit", edit_animal_path(animal), class: 'btn btn-flat'%>
+                          <%= link_to "Delete", animal_path(animal), class: 'btn btn-flat', method: :delete, data: { confirm: "Are you sure?" } %>
+                      </div>
+                    </div>
+                  <% end %>
               </div>
           </div>
       </div>

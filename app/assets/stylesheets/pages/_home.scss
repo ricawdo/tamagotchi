@@ -24,6 +24,7 @@
   padding: 20px;
   margin-bottom: 80px;
   transition: transform, 0.3s ease-in-out;
+  background-color: white;
   &:hover {
     transform: scale(1.2);
     color: black;
@@ -39,4 +40,9 @@
 .card-step:hover h3 {
   font-family: "Montserrat";
   color: black;
+}
+
+
+body {
+  background-color: burlywood;
 }
