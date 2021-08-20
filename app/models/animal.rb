@@ -13,6 +13,6 @@ class Animal < ApplicationRecord
   validates :specie, presence: true
   validates :adress, presence: true
   validates :photo, presence: true
-  validates :description, length: { minimum: 20,
-    too_short: "%{count} characters is the minimum allowed" }
+  # validates :description, length: { minimum: 20,
+  # too_short: "%{count} characters is the minimum allowed"
 end
