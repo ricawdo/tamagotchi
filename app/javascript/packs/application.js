@@ -32,11 +32,18 @@ import { initFlatpickr } from "../plugins/flatpickr";
 import { computePrice } from "../plugins/compute_price";
 import { initAutocomplete} from "../plugins/init_autocomplete";
 import { initStarRating } from '../plugins/init_star_rating';
+import { coordinates } from "../plugins/geoloc";
 
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  navigator.geolocation.getCurrentPosition((data) => {
+    console.log(data);
+    coordinates(data)
+  });
+
+
   const mapElement = document.getElementById('map');
   if (mapElement) {
     initMapbox();

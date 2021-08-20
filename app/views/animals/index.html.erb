@@ -1,5 +1,17 @@
-<div class="content" id="contain-map-and-animals" >
+<%= form_tag animals_path, method: :get, class: "form-inline md-form mr-auto mb-4" do %>
+  <%= text_field_tag :adress,
+    params[:adress],
+    class: "form-control mr-sm-2",
+    placeholder: "Address",
+    value: @address_geocoded
+  %>
+  <%= hidden_field_tag "latitude" %>
+  <%= hidden_field_tag "longitude" %>
+  <%= select_tag 'specie', options_for_select(Animal::SPECIE), class: "form-control mr-sm-2" %>
+  <%= submit_tag "Search", class: "btn-flat btn-flat:hover border-0 font-weight-bold" %>
+<% end %>
 
+<div class="content" id="contain-map-and-animals" >
   <div class="map" id="map"
      style="width: 50%; height: 100vh;"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"

@@ -1,6 +1,6 @@
 <div class="container d-flex">
   <div class="details">
-  <h2>Date de la location</h2>
+  <h2>Date of location</h2>
     <div class="container-form">
       <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
         <%= simple_form_for :search, method: "get" do |f| %>
@@ -9,7 +9,7 @@
         <% end %>
       </div>
     </div>
-  <h2>Mode de paiement :</h2>
+  <h2>Paiement :</h2>
   <div class="btn-pay">
   <button type="button" class="btn-new btn btn-outline-success">CB</button>
   <button type="button" class="btn-new btn btn-outline-success">Paypal</button>
@@ -26,8 +26,8 @@
         <p class="infos"><u><strong>Specie :</strong></u> <%= @animal.specie %></p>
 
         <div class="price">
-          <h2>Prix : <span id="animal-price"><%= @animal.price %></span> $</h2>
-          <h2>Jour(s) : <span id="total-days">1</span></h2>
+          <h2>Price : <span id="animal-price"><%= @animal.price %></span> $</h2>
+          <h2>Day(s) : <span id="total-days">1</span></h2>
           <h2>Total : <span id="total-price"><%= @animal.price %></span> $</h2>
           <div class="btn-booking">
           <button type="button" id ="btn-payment" class="btn btn-flat not-active" data-toggle="modal" data-target="#exampleModalCenter">
@@ -46,13 +46,13 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLongTitle">Félicitation</h3>
+        <h3 class="modal-title" id="exampleModalLongTitle">Congratulations</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <h3>Votre commande est confirmée! Amusez-vous bien 🐒</h3>
+        <h3>Your order is confirmed! Have fun 🐒</h3>
       </div>
       <div class="modal-footer">
         <%= simple_form_for([@animal, Booking.new]) do |f| %>

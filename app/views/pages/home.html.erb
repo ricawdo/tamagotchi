@@ -8,6 +8,9 @@
           class: "form-control mr-sm-2",
           placeholder: "Address"
         %>
+        <%= hidden_field_tag "latitude" %>
+        <%= hidden_field_tag "longitude" %>
+
         <%= select_tag 'specie', options_for_select(Animal::SPECIE), class: "form-control mr-sm-2" %>
         <%= submit_tag "Search", class: "btn-flat btn-flat:hover border-0 font-weight-bold" %>
       <% end %>
@@ -19,7 +22,7 @@
   <div class="card-step">
   <img src="http://parallelstudio.tv/wp-content/uploads/2018/11/new-york-times-illustration-christmas3.jpg" alt="" id="step-1-img">
   <h3>Step 1</h3>
-  <p>Enter your city and a category</p>
+  <p>Enter your city and a category </p>
   </div>
   <div class="card-step">
   <img src="https://i.pinimg.com/736x/1c/b1/4f/1cb14fc70af8b59f01b8b258443ca98f.jpg" alt="" id="step-1-img">
@@ -36,5 +39,17 @@
   <h3>Step 4</h3>
   <p>Have fun with your pet</p>
   </div>
-
 </div>
+
+<div class="card-category" style="background-image: linear-gradient(to left, black 27%,transparent 73%), url(https://images.unsplash.com/photo-1490042706304-06c664f6fd9a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80)">
+  <div class="text-card-category">
+    <div>
+      <h2>Rent your pet</h2>
+      <p>Take time for yourself and earn money</p>
+    </div>
+
+    <%= link_to "Rent", new_animal_path, class: "btn btn-flat" %>
+  </div>
+</div>
+
+<%= render 'shared/review-page' %>

@@ -1,10 +1,15 @@
 class AnimalsController < ApplicationController
-skip_before_action :authenticate_user!, only: [ :index, :show ]
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
     @animals = policy_scope(Animal)
+    @address_geocoded = ""
     # the `geocoded` scope filters only animals with coordinates (latitude & longitude)
-    if params[:name].present? || params[:specie].present?
+    if params[:adress].empty?
+      @animals = Animal.near([params[:latitude].to_f, params[:longitude].to_f], 50)
+      @address_geocoded = Geocoder.search([params[:latitude].to_f, params[:longitude].to_f]).first.data["display_name"]
+      @animals = @animals.where(specie: params[:specie])
+    else
       @animals = @animals.near(params[:adress], 50)
       @animals = @animals.where(specie: params[:specie])
     end
