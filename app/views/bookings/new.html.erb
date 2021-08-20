@@ -54,14 +54,12 @@
       <div class="modal-body">
         <h3>Votre commande est confirmée! Amusez-vous bien 🐒</h3>
       </div>
-
+      <div class="modal-footer">
         <%= simple_form_for([@animal, Booking.new]) do |f| %>
           <%= f.input :start_date, as: :hidden, html5: true %>
           <%= f.input :end_date, as: :hidden, html5: true %>
-          <%= f.submit %>
+          <%= f.submit class: "btn btn-flat"%>
         <% end %>
-
-      <div class="modal-footer">
         <%= link_to "Fermer", root_path, class: "btn btn-flat"  %>
       </div>
     </div>
