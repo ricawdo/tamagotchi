@@ -55,12 +55,12 @@
         <h3>Your order is confirmed! Have fun 🐒</h3>
       </div>
       <div class="modal-footer">
+        <%= link_to "Fermer", new_booking_path, class: "btn btn-flat"  %>
         <%= simple_form_for([@animal, Booking.new]) do |f| %>
           <%= f.input :start_date, as: :hidden, html5: true %>
           <%= f.input :end_date, as: :hidden, html5: true %>
           <%= f.submit class: "btn btn-flat"%>
         <% end %>
-        <%= link_to "Fermer", root_path, class: "btn btn-flat"  %>
       </div>
     </div>
   </div>
