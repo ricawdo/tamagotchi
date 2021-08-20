@@ -1,0 +1,45 @@
+.card-category {
+  background-size: cover;
+  background-position: left;
+  height: 350px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 0 auto;
+  margin-bottom: 100px;
+  margin-top: 30px;
+}
+
+.text-card-category p {
+  font-size: 15px;
+  font-weight: lighter;
+  width: 200px;
+  text-align: left;
+  position: absolute;
+  right: -6px;
+}
+
+.text-card-category h2 {
+  margin-bottom: 20px;
+}
+
+.btn-card-category {
+  display: flex;
+}
+
+.text-card-category {
+  width: 82%;
+  text-align: right;
+  position: relative;
+}
+
+.text-card-category .btn {
+  margin-top: 97px;
+}
+
+.container-notification {
+  margin-bottom: 60px;
+}
